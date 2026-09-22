@@ -17,14 +17,6 @@ export default function Contact() {
 
         <Reveal delay={0.1}>
           <div className="rounded-2xl border border-border/60 bg-bg-card p-8 text-center sm:p-12">
-            <span className="mx-auto mb-6 inline-flex items-center gap-2 rounded-full border border-border/60 bg-bg-soft px-4 py-1.5 text-xs text-fg-muted">
-              <span className="relative flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent-cyan opacity-75" />
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-accent-cyan" />
-              </span>
-              Available for internships &amp; junior roles
-            </span>
-
             <h3 className="text-2xl font-bold sm:text-3xl">
               Let&apos;s build something together.
             </h3>

@@ -29,9 +29,6 @@ export default function Footer() {
           })}
         </div>
         <p className="text-xs text-fg-muted">
-          Built with Next.js and Tailwind CSS, deployed with Vercel
-        </p>
-        <p className="text-xs text-fg-muted">
           © {new Date().getFullYear()} {profile.name}. All rights reserved.
         </p>
       </div>
