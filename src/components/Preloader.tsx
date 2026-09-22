@@ -7,7 +7,7 @@ export default function Preloader() {
   const [fading, setFading] = useState(false);
 
   useEffect(() => {
-    const minDelay = new Promise((resolve) => setTimeout(resolve, 600));
+    const minDelay = new Promise((resolve) => setTimeout(resolve, 2000));
     const pageLoad =
       document.readyState === "complete"
         ? Promise.resolve()
@@ -30,7 +30,7 @@ export default function Preloader() {
       }`}
     >
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src="/loading.svg" alt="Loading" className="h-64 w-64" />
+      <img src="/loading.svg" alt="Loading" className="h-96 w-96" />
     </div>
   );
 }
