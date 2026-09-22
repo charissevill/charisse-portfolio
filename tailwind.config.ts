@@ -19,9 +19,9 @@ const config: Config = {
           muted: "rgb(var(--fg-muted) / <alpha-value>)",
         },
         accent: {
-          DEFAULT: "#7c5cff",
-          cyan: "#22d3ee",
-          violet: "#7c5cff",
+          DEFAULT: "#ec4899",
+          cyan: "#9d174d",
+          violet: "#ec4899",
         },
       },
       fontFamily: {

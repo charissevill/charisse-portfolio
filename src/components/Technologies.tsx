@@ -67,8 +67,8 @@ export default function Technologies() {
 
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {technologyGroups.map((group, i) => (
-            <Reveal key={group.category} delay={i * 0.08}>
-              <div className="rounded-2xl border border-border/60 bg-bg-card p-6 transition-all duration-300 hover:-translate-y-1 hover:border-accent/60 hover:shadow-xl hover:shadow-accent/10">
+            <Reveal key={group.category} delay={i * 0.08} className="h-full">
+              <div className="flex h-full flex-col rounded-2xl border border-border/60 bg-bg-card p-6 transition-all duration-300 hover:-translate-y-1 hover:border-accent/60 hover:shadow-xl hover:shadow-accent/10">
                 <h3 className="mb-4 font-mono text-sm text-accent">
                   {group.category}
                 </h3>
