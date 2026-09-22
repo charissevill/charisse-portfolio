@@ -1,8 +1,6 @@
 "use client";
 
-import { Lottie } from "lottie-react";
 import { useEffect, useState } from "react";
-import loadingAnimation from "@/assets/loading-animation.json";
 import { profile } from "@/data/content";
 
 export default function Preloader() {
@@ -36,7 +34,8 @@ export default function Preloader() {
         <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-accent to-accent-cyan text-lg font-bold text-white">
           {profile.initials}
         </span>
-        <Lottie src={loadingAnimation} autoplay loop className="h-20 w-36" />
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="/loading.svg" alt="Loading" className="h-24 w-24" />
       </div>
     </div>
   );
