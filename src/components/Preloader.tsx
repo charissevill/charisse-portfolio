@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { profile } from "@/data/content";
 
 export default function Preloader() {
   const [visible, setVisible] = useState(true);
@@ -30,13 +29,8 @@ export default function Preloader() {
         fading ? "opacity-0" : "opacity-100"
       }`}
     >
-      <div className="flex flex-col items-center gap-2">
-        <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-accent to-accent-cyan text-lg font-bold text-white">
-          {profile.initials}
-        </span>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/loading.svg" alt="Loading" className="h-24 w-24" />
-      </div>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src="/loading.svg" alt="Loading" className="h-64 w-64" />
     </div>
   );
 }
