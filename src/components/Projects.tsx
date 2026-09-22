@@ -15,7 +15,7 @@ export default function Projects() {
           {projects.map((project, i) => (
             <Reveal key={project.id} delay={i * 0.06}>
               <div className="flex flex-col gap-4 p-5 sm:flex-row">
-                <span className="flex h-20 w-20 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-border/60 bg-bg-soft p-3">
+                <span className="flex h-20 w-20 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-border/60 bg-white p-3">
                   {project.image ? (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img
