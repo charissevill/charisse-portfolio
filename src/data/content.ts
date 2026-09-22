@@ -42,14 +42,7 @@ export const technologyGroups = [
   },
   {
     category: "Mobile & Frontend",
-    items: [
-      "Flutter",
-      "React",
-      "Material Design",
-      "Provider",
-      "go_router",
-      "fl_chart",
-    ],
+    items: ["Flutter", "React", "Material Design", "Provider"],
   },
   {
     category: "Backend & Cloud",
