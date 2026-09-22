@@ -162,32 +162,28 @@ export type Achievement = {
 export const achievements: Achievement[] = [
   {
     id: "deans-list-third-term-2025-2026",
-    title: "Dean's List Award — Second Honors (Third Term)",
-    date: "AY 2025–2026",
-    description:
-      "Awarded by NU Baliwag SET for attaining a GWA of 3.30, Rank 3, Third Year – Third Term, Academic Year 2025–2026. Recognized at the Siklab Bughaw Dean's List Awarding Ceremony, July 8, 2026.",
+    title: "Dean's List Award — Second Honors",
+    date: "Third Term, AY 2025–2026",
+    description: "Awarded by NU Baliwag for a GWA of 3.30, Rank 3.",
   },
   {
     id: "deans-list-second-term-2025-2026",
-    title: "Dean's List Award — Second Honors (Second Term)",
-    date: "AY 2025–2026",
-    description:
-      "Awarded by NU Baliwag SET for attaining a GWA of 3.30, Rank 2, Third Year – Second Term, Academic Year 2025–2026. Recognized at the Siklab Bughaw Dean's List Awarding Ceremony, July 8, 2026.",
+    title: "Dean's List Award — Second Honors",
+    date: "Second Term, AY 2025–2026",
+    description: "Awarded by NU Baliwag for a GWA of 3.30, Rank 2.",
   },
   {
-    id: "deans-list-first-honors",
+    id: "deans-list-third-term-2023-2024",
     title: "Dean's List Award — First Honors",
-    date: "August 2024",
-    description:
-      "Awarded by NU Baliwag for attaining a GWA of 3.68, Third Term, Academic Year 2023–2024.",
+    date: "Third Term, AY 2023–2024",
+    description: "Awarded by NU Baliwag for a GWA of 3.68.",
     images: ["/achievements/cert2.jpg"],
   },
   {
-    id: "deans-list-second-honors",
+    id: "deans-list-second-term-2023-2024",
     title: "Dean's List Award — Second Honors",
-    date: "April 2024",
-    description:
-      "Awarded by NU Baliwag for attaining a GWA of 3.27, Second Term, Academic Year 2023–2024.",
+    date: "Second Term, AY 2023–2024",
+    description: "Awarded by NU Baliwag for a GWA of 3.27.",
     images: ["/achievements/cert1.jpg"],
   },
 ];
