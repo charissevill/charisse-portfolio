@@ -7,8 +7,8 @@
 export const profile = {
   name: "Charisse Villarama",
   initials: "CV",
-  // TODO: set your preferred title/role
-  role: "Full-Stack Developer",
+  // TODO: set your preferred title/role — leave empty to hide it
+  role: "",
   tagline:
     "I build responsive, scalable, and user-focused web and mobile apps.",
   email: "villaramacharisse01@gmail.com",

@@ -17,11 +17,15 @@ const mono = IBM_Plex_Mono({
   display: "swap",
 });
 
+const pageTitle = profile.role
+  ? `${profile.name} — ${profile.role}`
+  : profile.name;
+
 export const metadata: Metadata = {
-  title: `${profile.name} — ${profile.role}`,
+  title: pageTitle,
   description: profile.tagline,
   openGraph: {
-    title: `${profile.name} — ${profile.role}`,
+    title: pageTitle,
     description: profile.tagline,
     type: "website",
   },

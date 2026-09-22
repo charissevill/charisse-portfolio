@@ -33,14 +33,16 @@ export default function Hero() {
           {profile.name}
         </motion.h1>
 
-        <motion.h2
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="mt-2 text-2xl font-semibold tracking-tight text-fg-muted sm:text-4xl"
-        >
-          <span className="text-gradient">{profile.role}</span>
-        </motion.h2>
+        {profile.role && (
+          <motion.h2
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="mt-2 text-2xl font-semibold tracking-tight text-fg-muted sm:text-4xl"
+          >
+            <span className="text-gradient">{profile.role}</span>
+          </motion.h2>
+        )}
 
         <motion.p
           initial={{ opacity: 0, y: 16 }}
