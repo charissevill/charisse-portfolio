@@ -33,27 +33,24 @@ export const about = {
 };
 
 // Grouped by category for a cleaner presentation than one long flat list.
-// Add, remove, or re-group items freely.
+// Add, remove, or re-group items freely. Item names here are matched to
+// brand icons in Technologies.tsx — keep spelling in sync with techIcons.
 export const technologyGroups = [
   {
     category: "Languages",
-    items: ["JavaScript", "TypeScript", "Python", "HTML", "CSS"],
+    items: ["Dart", "JavaScript"],
   },
   {
-    category: "Frontend",
-    items: ["React", "Next.js", "Tailwind CSS", "Bootstrap"],
+    category: "Mobile & Frontend",
+    items: ["Flutter", "Material Design"],
   },
   {
-    category: "Backend",
-    items: ["Node.js", "Express", "REST API"],
-  },
-  {
-    category: "Database & Cloud",
-    items: ["MySQL", "PostgreSQL", "Firebase"],
+    category: "Backend & Cloud",
+    items: ["Firebase", "Node.js", "Google Maps Platform"],
   },
   {
     category: "Tools & Platforms",
-    items: ["Git", "GitHub", "Figma", "Postman", "Vite"],
+    items: ["Git", "GitHub", "GitHub Actions"],
   },
 ];
 
