@@ -62,6 +62,9 @@ export type Project = {
   tags: string[];
   link?: string;
   featured?: boolean;
+  // Optional screenshot/mockup. Put files in /public/projects and use
+  // the project's id as the filename, e.g. "/projects/mix-and-blooms.jpg"
+  image?: string;
 };
 
 export const projects: Project[] = [
@@ -86,6 +89,7 @@ export const projects: Project[] = [
       "PDF Generation",
     ],
     link: "https://mixblooms-ea632.web.app",
+    image: "/projects/mix-and-blooms.png",
     featured: true,
   },
   {
@@ -109,6 +113,7 @@ export const projects: Project[] = [
       "GitHub Actions CI",
     ],
     link: "https://github.com/charissevill/ToolFlow",
+    image: "/projects/toolflow.png",
     featured: true,
   },
   {
@@ -128,6 +133,8 @@ export const projects: Project[] = [
       "go_router",
     ],
     link: "https://github.com/charissevill/TripNestPH",
+    // TODO: drop a screenshot in /public/projects/tripnest-ph.jpg and uncomment
+    // image: "/projects/tripnest-ph.jpg",
     featured: true,
   },
   {
@@ -147,6 +154,8 @@ export const projects: Project[] = [
       "Google Sign-In",
     ],
     link: "https://github.com/charissevill/FlipSnap",
+    // TODO: drop a screenshot in /public/projects/flipsnap.jpg and uncomment
+    // image: "/projects/flipsnap.jpg",
     featured: false,
   },
 ];
@@ -189,23 +198,11 @@ export const achievements: Achievement[] = [
   },
 ];
 
-export type GalleryItem = {
-  id: string;
-  caption: string;
-  src?: string; // put files in /public/gallery and set the path, e.g. "/gallery/1.jpg"
-};
-
-// Placeholder tiles — add images to /public/gallery and fill in `src`.
-export const gallery: GalleryItem[] = Array.from({ length: 8 }).map((_, i) => ({
-  id: `gallery-${i + 1}`,
-  caption: `Gallery photo ${i + 1}`,
-}));
-
 export const nav = [
   { label: "About", href: "#about" },
   { label: "Technologies", href: "#technologies" },
   { label: "Projects", href: "#projects" },
   { label: "Achievements", href: "#achievements" },
-  { label: "Gallery", href: "#gallery" },
+  { label: "Certifications", href: "#certifications" },
   { label: "Contact", href: "#contact" },
 ];

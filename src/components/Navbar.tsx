@@ -2,10 +2,10 @@
 
 import {
   Award,
+  BadgeCheck,
   Code2,
   Download,
   FolderGit2,
-  ImageIcon,
   Mail,
   Menu,
   User,
@@ -21,7 +21,7 @@ const navIcons: Record<string, typeof User> = {
   Technologies: Code2,
   Projects: FolderGit2,
   Achievements: Award,
-  Gallery: ImageIcon,
+  Certifications: BadgeCheck,
   Contact: Mail,
 };
 
@@ -51,7 +51,7 @@ export default function Navbar() {
               <a
                 key={item.href}
                 href={item.href}
-                className={`inline-flex items-center gap-1.5 text-sm transition-colors ${
+                className={`relative inline-flex items-center gap-1.5 pb-1 text-sm transition-colors ${
                   isActive ? "text-fg" : "text-fg-muted hover:text-fg"
                 }`}
               >
@@ -62,6 +62,11 @@ export default function Navbar() {
                   />
                 )}
                 {item.label}
+                <span
+                  className={`absolute -bottom-1 left-0 h-0.5 w-full origin-left rounded-full bg-gradient-to-r from-accent to-accent-cyan transition-transform duration-300 ${
+                    isActive ? "scale-x-100" : "scale-x-0"
+                  }`}
+                />
               </a>
             );
           })}

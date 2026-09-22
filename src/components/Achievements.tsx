@@ -37,7 +37,7 @@ export default function Achievements() {
               <div className="grid gap-4 sm:grid-cols-2">
                 {group.items.map((item, i) => (
                   <Reveal key={item.id} delay={gi * 0.08 + i * 0.04}>
-                    <div className="flex h-full gap-4 rounded-2xl border border-border/60 bg-bg-card p-5 transition-colors hover:border-accent/60">
+                    <div className="flex h-full gap-4 rounded-2xl border border-border/60 bg-bg-card p-6 transition-all duration-300 hover:-translate-y-1 hover:border-accent/60 hover:shadow-xl hover:shadow-accent/10">
                       <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-accent/10 text-accent">
                         <Award size={18} />
                       </span>

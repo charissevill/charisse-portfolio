@@ -5,8 +5,10 @@ import SectionHeading from "./SectionHeading";
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-24">
-      <div className="container-custom">
+    <section id="contact" className="relative overflow-hidden py-24">
+      <div className="pointer-events-none absolute bottom-0 left-1/2 h-72 w-72 -translate-x-1/2 translate-y-1/3 rounded-full bg-accent/20 blur-3xl" />
+
+      <div className="container-custom relative">
         <Reveal>
           <SectionHeading index="06." title="Contact" icon={Mail} />
         </Reveal>
@@ -24,7 +26,7 @@ export default function Contact() {
               href={`https://mail.google.com/mail/?view=cm&fs=1&to=${profile.email}`}
               target="_blank"
               rel="noreferrer"
-              className="mt-8 inline-flex items-center gap-2 rounded-full bg-fg px-6 py-3 text-sm font-medium text-bg transition-opacity hover:opacity-90"
+              className="mt-8 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-accent to-accent-cyan px-6 py-3 text-sm font-medium text-white shadow-lg shadow-accent/20 transition-transform hover:-translate-y-0.5 hover:shadow-xl hover:shadow-accent/30"
             >
               <Mail size={16} />
               {profile.email}
