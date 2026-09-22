@@ -1,3 +1,4 @@
+import { User } from "lucide-react";
 import { about } from "@/data/content";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
@@ -7,7 +8,7 @@ export default function About() {
     <section id="about" className="py-24">
       <div className="container-custom">
         <Reveal>
-          <SectionHeading index="01." title="About" />
+          <SectionHeading index="01." title="About" icon={User} />
         </Reveal>
         <Reveal delay={0.1}>
           <div className="max-w-3xl space-y-5 text-base leading-relaxed text-fg-muted sm:text-lg">

@@ -8,7 +8,7 @@ export default function Contact() {
     <section id="contact" className="py-24">
       <div className="container-custom">
         <Reveal>
-          <SectionHeading index="06." title="Contact" />
+          <SectionHeading index="06." title="Contact" icon={Mail} />
         </Reveal>
 
         <Reveal delay={0.1}>
@@ -21,7 +21,9 @@ export default function Contact() {
               projects. Feel free to reach out.
             </p>
             <a
-              href={`mailto:${profile.email}`}
+              href={`https://mail.google.com/mail/?view=cm&fs=1&to=${profile.email}`}
+              target="_blank"
+              rel="noreferrer"
               className="mt-8 inline-flex items-center gap-2 rounded-full bg-fg px-6 py-3 text-sm font-medium text-bg transition-opacity hover:opacity-90"
             >
               <Mail size={16} />

@@ -17,7 +17,10 @@ export const profile = {
   socials: [
     { label: "GitHub", href: "https://github.com/charissevill" },
     { label: "LinkedIn", href: "https://linkedin.com/in/your-username" },
-    { label: "Email", href: "mailto:villaramacharisse01@gmail.com" },
+    {
+      label: "Email",
+      href: "https://mail.google.com/mail/?view=cm&fs=1&to=villaramacharisse01@gmail.com",
+    },
   ],
 };
 
@@ -155,6 +158,7 @@ export type Achievement = {
   id: string;
   title: string;
   date: string;
+  year: string;
   description?: string;
   images?: string[]; // put files in /public/achievements, e.g. "/achievements/cert1.jpg"
 };
@@ -163,23 +167,27 @@ export const achievements: Achievement[] = [
   {
     id: "deans-list-third-term-2025-2026",
     title: "Dean's List Award — Second Honors",
-    date: "Third Term, AY 2025–2026",
+    date: "Third Term",
+    year: "AY 2025–2026",
   },
   {
     id: "deans-list-second-term-2025-2026",
     title: "Dean's List Award — Second Honors",
-    date: "Second Term, AY 2025–2026",
+    date: "Second Term",
+    year: "AY 2025–2026",
   },
   {
     id: "deans-list-third-term-2023-2024",
     title: "Dean's List Award — First Honors",
-    date: "Third Term, AY 2023–2024",
+    date: "Third Term",
+    year: "AY 2023–2024",
     images: ["/achievements/cert2.jpg"],
   },
   {
     id: "deans-list-second-term-2023-2024",
     title: "Dean's List Award — Second Honors",
-    date: "Second Term, AY 2023–2024",
+    date: "Second Term",
+    year: "AY 2023–2024",
     images: ["/achievements/cert1.jpg"],
   },
 ];

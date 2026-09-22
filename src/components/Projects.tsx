@@ -8,7 +8,7 @@ export default function Projects() {
     <section id="projects" className="py-24">
       <div className="container-custom">
         <Reveal>
-          <SectionHeading index="03." title="Projects" />
+          <SectionHeading index="03." title="Projects" icon={FolderGit2} />
         </Reveal>
 
         <div className="grid gap-6 sm:grid-cols-2">

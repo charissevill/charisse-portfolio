@@ -1,10 +1,29 @@
 "use client";
 
-import { Download, Menu, X } from "lucide-react";
+import {
+  Award,
+  Code2,
+  Download,
+  FolderGit2,
+  ImageIcon,
+  Mail,
+  Menu,
+  User,
+  X,
+} from "lucide-react";
 import { useState } from "react";
 import { nav, profile } from "@/data/content";
 import { useActiveSection } from "@/lib/useActiveSection";
 import ThemeToggle from "./ThemeToggle";
+
+const navIcons: Record<string, typeof User> = {
+  About: User,
+  Technologies: Code2,
+  Projects: FolderGit2,
+  Achievements: Award,
+  Gallery: ImageIcon,
+  Contact: Mail,
+};
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -27,14 +46,21 @@ export default function Navbar() {
           {nav.map((item) => {
             const id = item.href.replace("#", "");
             const isActive = active === id;
+            const Icon = navIcons[item.label];
             return (
               <a
                 key={item.href}
                 href={item.href}
-                className={`text-sm transition-colors ${
+                className={`inline-flex items-center gap-1.5 text-sm transition-colors ${
                   isActive ? "text-fg" : "text-fg-muted hover:text-fg"
                 }`}
               >
+                {Icon && (
+                  <Icon
+                    size={14}
+                    className={isActive ? "text-accent" : ""}
+                  />
+                )}
                 {item.label}
               </a>
             );
@@ -66,16 +92,29 @@ export default function Navbar() {
       {open && (
         <div className="border-t border-border/60 bg-bg md:hidden">
           <nav className="container-custom flex flex-col gap-4 py-6">
-            {nav.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                onClick={() => setOpen(false)}
-                className="text-sm text-fg-muted transition-colors hover:text-fg"
-              >
-                {item.label}
-              </a>
-            ))}
+            {nav.map((item) => {
+              const id = item.href.replace("#", "");
+              const isActive = active === id;
+              const Icon = navIcons[item.label];
+              return (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setOpen(false)}
+                  className={`inline-flex items-center gap-2 text-sm transition-colors ${
+                    isActive ? "text-fg" : "text-fg-muted hover:text-fg"
+                  }`}
+                >
+                  {Icon && (
+                    <Icon
+                      size={14}
+                      className={isActive ? "text-accent" : ""}
+                    />
+                  )}
+                  {item.label}
+                </a>
+              );
+            })}
             <div className="flex items-center justify-between pt-2">
               <ThemeToggle />
               <a

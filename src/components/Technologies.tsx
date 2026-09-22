@@ -1,3 +1,4 @@
+import { Code2 } from "lucide-react";
 import { technologyGroups } from "@/data/content";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
@@ -7,7 +8,7 @@ export default function Technologies() {
     <section id="technologies" className="py-24">
       <div className="container-custom">
         <Reveal>
-          <SectionHeading index="02." title="Technologies" />
+          <SectionHeading index="02." title="Technologies" icon={Code2} />
         </Reveal>
 
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">

@@ -13,7 +13,7 @@ export default function Gallery() {
     <section id="gallery" className="py-24">
       <div className="container-custom">
         <Reveal>
-          <SectionHeading index="05." title="Gallery" />
+          <SectionHeading index="05." title="Gallery" icon={ImageIcon} />
         </Reveal>
 
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">

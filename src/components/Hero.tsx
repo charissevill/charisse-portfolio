@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowDown, Download } from "lucide-react";
+import { ArrowDown, ArrowRight, Download } from "lucide-react";
 import { profile } from "@/data/content";
 
 export default function Hero() {
@@ -59,9 +59,10 @@ export default function Hero() {
         >
           <a
             href="#projects"
-            className="rounded-full bg-fg px-6 py-3 text-sm font-medium text-bg transition-opacity hover:opacity-90"
+            className="inline-flex items-center gap-2 rounded-full bg-fg px-6 py-3 text-sm font-medium text-bg transition-opacity hover:opacity-90"
           >
             View My Work
+            <ArrowRight size={14} />
           </a>
           <a
             href={profile.resumeUrl}
