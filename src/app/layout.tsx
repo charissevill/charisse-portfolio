@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Mono, Inter } from "next/font/google";
+import Preloader from "@/components/Preloader";
 import { profile } from "@/data/content";
 import "./globals.css";
 
@@ -44,7 +45,10 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="font-sans antialiased">{children}</body>
+      <body className="font-sans antialiased">
+        <Preloader />
+        {children}
+      </body>
     </html>
   );
 }
