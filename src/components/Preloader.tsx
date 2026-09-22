@@ -7,7 +7,7 @@ export default function Preloader() {
   const [fading, setFading] = useState(false);
 
   useEffect(() => {
-    const minDelay = new Promise((resolve) => setTimeout(resolve, 2000));
+    const minDelay = new Promise((resolve) => setTimeout(resolve, 3500));
     const pageLoad =
       document.readyState === "complete"
         ? Promise.resolve()
