@@ -38,15 +38,26 @@ export const about = {
 export const technologyGroups = [
   {
     category: "Languages",
-    items: ["Dart", "JavaScript"],
+    items: ["Dart", "JavaScript", "Python", "PHP", "HTML", "CSS"],
   },
   {
     category: "Mobile & Frontend",
-    items: ["Flutter", "Material Design"],
+    items: [
+      "Flutter",
+      "React",
+      "Material Design",
+      "Provider",
+      "go_router",
+      "fl_chart",
+    ],
   },
   {
     category: "Backend & Cloud",
     items: ["Firebase", "Node.js", "Google Maps Platform"],
+  },
+  {
+    category: "AI & Integrations",
+    items: ["OpenAI", "Groq", "Meshy 3D", "Azure AI", "PayMongo", "Lalamove"],
   },
   {
     category: "Tools & Platforms",

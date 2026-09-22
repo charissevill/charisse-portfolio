@@ -1,6 +1,18 @@
-import { Code2 } from "lucide-react";
-import type { IconType } from "react-icons";
 import {
+  BarChart3,
+  Box,
+  Cloud,
+  Code2,
+  CreditCard,
+  Layers,
+  Route,
+  Sparkles,
+  Truck,
+  Zap,
+} from "lucide-react";
+import type { ComponentType } from "react";
+import {
+  SiCss,
   SiDart,
   SiFirebase,
   SiFlutter,
@@ -8,22 +20,42 @@ import {
   SiGithub,
   SiGithubactions,
   SiGooglemaps,
+  SiHtml5,
   SiJavascript,
   SiMaterialdesign,
   SiNodedotjs,
+  SiPhp,
+  SiPython,
+  SiReact,
 } from "react-icons/si";
 import { technologyGroups } from "@/data/content";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 
-const techIcons: Record<string, IconType> = {
+// Mix of brand logos (react-icons/si) and generic fallbacks (lucide-react)
+// for tools that don't have a Simple Icons entry.
+const techIcons: Record<string, ComponentType<{ size?: number }>> = {
   Dart: SiDart,
   JavaScript: SiJavascript,
+  Python: SiPython,
+  PHP: SiPhp,
+  HTML: SiHtml5,
+  CSS: SiCss,
   Flutter: SiFlutter,
+  React: SiReact,
   "Material Design": SiMaterialdesign,
+  Provider: Layers,
+  go_router: Route,
+  fl_chart: BarChart3,
   Firebase: SiFirebase,
   "Node.js": SiNodedotjs,
   "Google Maps Platform": SiGooglemaps,
+  OpenAI: Sparkles,
+  Groq: Zap,
+  "Meshy 3D": Box,
+  "Azure AI": Cloud,
+  PayMongo: CreditCard,
+  Lalamove: Truck,
   Git: SiGit,
   GitHub: SiGithub,
   "GitHub Actions": SiGithubactions,
