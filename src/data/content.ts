@@ -65,6 +65,10 @@ export type Project = {
   // Optional app icon/logo. Put files in /public/projects and use
   // the project's id as the filename, e.g. "/projects/mix-and-blooms.png"
   image?: string;
+  // Optional UI screenshots shown via a "View Screenshots" button.
+  // Put files in /public/projects/screenshots, e.g.
+  // "/projects/screenshots/mix-and-blooms-1.jpg"
+  screenshots?: string[];
 };
 
 export const projects: Project[] = [

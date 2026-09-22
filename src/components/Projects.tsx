@@ -1,9 +1,25 @@
-import { ArrowUpRight, FolderGit2 } from "lucide-react";
+"use client";
+
+import {
+  ArrowUpRight,
+  ChevronLeft,
+  ChevronRight,
+  FolderGit2,
+  ImageIcon,
+  X,
+} from "lucide-react";
+import { useState } from "react";
 import { projects } from "@/data/content";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 
 export default function Projects() {
+  const [gallery, setGallery] = useState<{
+    images: string[];
+    title: string;
+    index: number;
+  } | null>(null);
+
   return (
     <section id="projects" className="py-24">
       <div className="container-custom">
@@ -38,17 +54,35 @@ export default function Projects() {
                     </span>
                   </div>
 
-                  {project.link && project.link !== "#" && (
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="mt-1 inline-flex items-center gap-1 text-xs text-accent hover:underline"
-                    >
-                      <ArrowUpRight size={12} />
-                      Link
-                    </a>
-                  )}
+                  <div className="mt-1 flex flex-wrap items-center gap-3">
+                    {project.link && project.link !== "#" && (
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center gap-1 text-xs text-accent hover:underline"
+                      >
+                        <ArrowUpRight size={12} />
+                        Link
+                      </a>
+                    )}
+                    {project.screenshots && project.screenshots.length > 0 && (
+                      <button
+                        type="button"
+                        onClick={() =>
+                          setGallery({
+                            images: project.screenshots!,
+                            title: project.title,
+                            index: 0,
+                          })
+                        }
+                        className="inline-flex items-center gap-1 text-xs text-accent hover:underline"
+                      >
+                        <ImageIcon size={12} />
+                        Preview
+                      </button>
+                    )}
+                  </div>
 
                   <p className="mt-2 text-sm leading-relaxed text-fg-muted">
                     {project.description}
@@ -70,6 +104,73 @@ export default function Projects() {
           ))}
         </div>
       </div>
+
+      {gallery && (
+        <div
+          className="fixed inset-0 z-[60] flex flex-col items-center justify-center gap-3 bg-black/80 p-6"
+          onClick={() => setGallery(null)}
+        >
+          <button
+            type="button"
+            aria-label="Close"
+            className="absolute right-6 top-6 text-white/80 hover:text-white"
+            onClick={() => setGallery(null)}
+          >
+            <X size={24} />
+          </button>
+
+          {gallery.images.length > 1 && (
+            <button
+              type="button"
+              aria-label="Previous screenshot"
+              onClick={(e) => {
+                e.stopPropagation();
+                setGallery((g) =>
+                  g
+                    ? {
+                        ...g,
+                        index: (g.index - 1 + g.images.length) % g.images.length,
+                      }
+                    : g,
+                );
+              }}
+              className="absolute left-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white sm:left-8"
+            >
+              <ChevronLeft size={32} />
+            </button>
+          )}
+
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={gallery.images[gallery.index]}
+            alt={`${gallery.title} screenshot ${gallery.index + 1}`}
+            className="max-h-[75vh] max-w-full rounded-lg object-contain"
+            onClick={(e) => e.stopPropagation()}
+          />
+
+          {gallery.images.length > 1 && (
+            <button
+              type="button"
+              aria-label="Next screenshot"
+              onClick={(e) => {
+                e.stopPropagation();
+                setGallery((g) =>
+                  g ? { ...g, index: (g.index + 1) % g.images.length } : g,
+                );
+              }}
+              className="absolute right-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white sm:right-8"
+            >
+              <ChevronRight size={32} />
+            </button>
+          )}
+
+          <p className="text-center text-sm text-white/80">
+            {gallery.title}
+            {gallery.images.length > 1 &&
+              ` — ${gallery.index + 1}/${gallery.images.length}`}
+          </p>
+        </div>
+      )}
     </section>
   );
 }
