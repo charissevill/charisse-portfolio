@@ -163,10 +163,23 @@ export const achievements: Achievement[] = [
   },
 ];
 
+export type GalleryItem = {
+  id: string;
+  caption: string;
+  src?: string; // put files in /public/gallery and set the path, e.g. "/gallery/1.jpg"
+};
+
+// Placeholder tiles — add images to /public/gallery and fill in `src`.
+export const gallery: GalleryItem[] = Array.from({ length: 8 }).map((_, i) => ({
+  id: `gallery-${i + 1}`,
+  caption: `Gallery photo ${i + 1}`,
+}));
+
 export const nav = [
   { label: "About", href: "#about" },
   { label: "Technologies", href: "#technologies" },
   { label: "Projects", href: "#projects" },
   { label: "Achievements", href: "#achievements" },
+  { label: "Gallery", href: "#gallery" },
   { label: "Contact", href: "#contact" },
 ];

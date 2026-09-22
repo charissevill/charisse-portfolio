@@ -12,7 +12,7 @@ export default function Contact() {
 
       <div className="container-custom relative">
         <Reveal>
-          <SectionHeading index="05." title="Contact" icon={Mail} />
+          <SectionHeading index="06." title="Contact" icon={Mail} />
         </Reveal>
 
         <Reveal delay={0.1}>

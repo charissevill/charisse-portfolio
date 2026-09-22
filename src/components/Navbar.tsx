@@ -5,6 +5,7 @@ import {
   Code2,
   Download,
   FolderGit2,
+  ImageIcon,
   Mail,
   Menu,
   User,
@@ -20,6 +21,7 @@ const navIcons: Record<string, typeof User> = {
   Technologies: Code2,
   Projects: FolderGit2,
   Achievements: Award,
+  Gallery: ImageIcon,
   Contact: Mail,
 };
 
