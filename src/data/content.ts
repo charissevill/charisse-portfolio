@@ -203,6 +203,5 @@ export const nav = [
   { label: "Technologies", href: "#technologies" },
   { label: "Projects", href: "#projects" },
   { label: "Achievements", href: "#achievements" },
-  { label: "Certifications", href: "#certifications" },
   { label: "Contact", href: "#contact" },
 ];

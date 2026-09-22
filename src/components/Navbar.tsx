@@ -2,7 +2,6 @@
 
 import {
   Award,
-  BadgeCheck,
   Code2,
   Download,
   FolderGit2,
@@ -21,7 +20,6 @@ const navIcons: Record<string, typeof User> = {
   Technologies: Code2,
   Projects: FolderGit2,
   Achievements: Award,
-  Certifications: BadgeCheck,
   Contact: Mail,
 };
 
@@ -32,14 +30,10 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-bg/80 backdrop-blur-md">
       <div className="container-custom flex h-16 items-center justify-between">
-        <a
-          href="#top"
-          className="flex items-center gap-2 font-mono text-sm font-semibold"
-        >
+        <a href="#top" className="flex items-center">
           <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-accent to-accent-cyan text-xs font-bold text-white">
             {profile.initials}
           </span>
-          <span className="hidden sm:inline">{profile.name}</span>
         </a>
 
         <nav className="hidden items-center gap-8 md:flex">

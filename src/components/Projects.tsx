@@ -19,7 +19,7 @@ export default function Projects() {
           <SectionHeading index="03." title="Projects" icon={FolderGit2} />
         </Reveal>
 
-        <div className="max-w-3xl divide-y divide-border/60 rounded-2xl border border-border/60 bg-bg-card">
+        <div className="divide-y divide-border/60 rounded-2xl border border-border/60 bg-bg-card">
           {projects.map((project, i) => (
             <Reveal key={project.id} delay={i * 0.06}>
               <div className="flex flex-col gap-4 p-5 sm:flex-row">

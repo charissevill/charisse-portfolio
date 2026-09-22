@@ -26,7 +26,7 @@ export default function Achievements() {
           <SectionHeading index="04." title="Achievements" icon={Award} />
         </Reveal>
 
-        <div className="max-w-3xl space-y-8">
+        <div className="space-y-8">
           {groups.map((group, gi) => (
             <div key={group.year}>
               <Reveal delay={gi * 0.08}>
