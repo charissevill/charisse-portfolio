@@ -11,14 +11,13 @@ export const profile = {
   role: "Full-Stack Developer",
   tagline:
     "I build responsive, scalable, and user-focused web and mobile apps.",
-  // TODO: replace with your real email
-  email: "hello@example.com",
+  email: "villaramacharisse01@gmail.com",
   // Drop your PDF resume in /public/cv/ and update the filename below
   resumeUrl: "/cv/Charisse-Villarama-CV.pdf",
   socials: [
-    { label: "GitHub", href: "https://github.com/your-username" },
+    { label: "GitHub", href: "https://github.com/charissevill" },
     { label: "LinkedIn", href: "https://linkedin.com/in/your-username" },
-    { label: "Email", href: "mailto:hello@example.com" },
+    { label: "Email", href: "mailto:villaramacharisse01@gmail.com" },
   ],
 };
 
