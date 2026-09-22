@@ -65,36 +65,89 @@ export type Project = {
   featured?: boolean;
 };
 
-// Sample/placeholder projects — replace with your real work.
 export const projects: Project[] = [
   {
-    id: "project-one",
-    title: "Project One: Replace With Your Project Title",
-    date: "Month Year",
+    id: "mix-and-blooms",
+    title:
+      "Mix & Blooms — Smart AI System for Personalized and Eco-friendly Flower Arrangements",
+    date: "Aug 2026 – Sep 2026",
     description:
-      "A short, clear summary of the problem this project solves and the role you played in building it. Mention the outcome or impact if you can.",
-    tags: ["Next.js", "TypeScript", "Tailwind CSS"],
-    link: "#",
+      "Full-stack Flutter/Firebase marketplace connecting customers with local florists in the Philippines, featuring AI-generated bouquet designs (DALL-E, 3D previews via Meshy), automated florist business verification (geospatial trust scoring + Azure Document Intelligence/Vision), and integrated Lalamove delivery logistics; built end-to-end (client, florist, admin, and rider-facing apps plus all Cloud Functions) as the sole developer, now live and in active use.",
+    tags: [
+      "Flutter",
+      "Dart",
+      "Firebase (Auth, Firestore, Storage, Cloud Functions, App Check, FCM)",
+      "Node.js",
+      "Google Maps/Places API",
+      "Geolocation",
+      "OpenAI DALL-E",
+      "Meshy 3D",
+      "Azure Document Intelligence/Vision",
+      "Lalamove API",
+      "PDF Generation",
+    ],
+    link: "https://mixblooms-ea632.web.app",
     featured: true,
   },
   {
-    id: "project-two",
-    title: "Project Two: Replace With Your Project Title",
-    date: "Month Year",
+    id: "toolflow",
+    title: "ToolFlow — Hardware E-Commerce Website",
+    date: "August 2026 – September 2026",
     description:
-      "A short, clear summary of the problem this project solves and the role you played in building it. Mention the outcome or impact if you can.",
-    tags: ["React", "Firebase", "REST API"],
-    link: "#",
+      "A full-stack e-commerce web app for a hardware/tools retailer, built solo as a BSIT capstone project to replace manual, in-person-only sales with online browsing, checkout, and store management. Designed and built the entire system end-to-end — Flutter Web frontend, Firebase backend (Auth, Firestore, Cloud Functions, Storage), PayMongo payment integration, Lalamove shipping rates, PhilSMS notifications, and an admin panel for inventory, orders, staff, and analytics/reporting (PDF/Excel/CSV export).",
+    tags: [
+      "Flutter",
+      "Dart",
+      "Firebase",
+      "Cloud Firestore",
+      "Firebase Auth",
+      "Cloud Functions",
+      "Node.js",
+      "PayMongo",
+      "Google Maps API",
+      "fl_chart",
+      "Material 3",
+      "GitHub Actions CI",
+    ],
+    link: "https://github.com/charissevill/ToolFlow",
     featured: true,
   },
   {
-    id: "project-three",
-    title: "Project Three: Replace With Your Project Title",
-    date: "Month Year",
+    id: "tripnest-ph",
+    title: "TripNest PH – AI-Powered Local Tourism Discovery App",
+    date: "July 2026 – September 2026",
     description:
-      "A short, clear summary of the problem this project solves and the role you played in building it. Mention the outcome or impact if you can.",
-    tags: ["Node.js", "Express", "PostgreSQL"],
-    link: "#",
+      "A Flutter mobile app that helps travelers discover Philippine destinations and plan trips through AI-generated itineraries grounded in real Places and Firestore data, location-based recommendations, budget tracking, and an AI travel chatbot; I designed and built the full app end-to-end (UI, Firebase backend, AI integration, admin/business management tools), including responsive layouts, security hardening, and automated tests.",
+    tags: [
+      "Flutter",
+      "Dart",
+      "Firebase (Auth, Firestore, Storage, Cloud Functions, Messaging, Analytics, Crashlytics)",
+      "Google Maps API",
+      "Google Places API",
+      "AI/LLM Integration",
+      "Provider (state management)",
+      "go_router",
+    ],
+    link: "https://github.com/charissevill/TripNestPH",
+    featured: true,
+  },
+  {
+    id: "flipsnap",
+    title: "FlipSnap — AI-Powered Study & Spaced Repetition App",
+    date: "January 2026 – May 2026",
+    description:
+      "A Flutter mobile app I designed and built solo to help students combat forgetfulness and low study motivation, combining flashcards, spaced repetition, and quizzes with an AI tutor (Llama 3 via Groq) for on-demand explanations and auto-generated decks. I handled the full stack — Firebase Auth/Firestore/Storage backend, offline-first sync, push notifications, and the Material 3 UI — resulting in a fully offline-capable app with cloud sync, streak-based gamification, and AI content generation from user notes/files.",
+    tags: [
+      "Flutter",
+      "Dart",
+      "Firebase (Auth, Firestore, Storage, FCM)",
+      "Provider",
+      "Groq API",
+      "Llama 3",
+      "Material 3",
+      "Google Sign-In",
+    ],
+    link: "https://github.com/charissevill/FlipSnap",
     featured: false,
   },
 ];
@@ -104,27 +157,25 @@ export type Achievement = {
   title: string;
   date: string;
   description?: string;
+  images?: string[]; // put files in /public/achievements, e.g. "/achievements/cert1.jpg"
 };
 
-// Sample/placeholder achievements — replace with your real ones.
 export const achievements: Achievement[] = [
   {
-    id: "achievement-one",
-    title: "Achievement or Award Title",
-    date: "Month Year",
-    description: "One sentence of context — organization, scope, or why it mattered.",
+    id: "deans-list-first-honors",
+    title: "Dean's List Award — First Honors",
+    date: "August 2024",
+    description:
+      "Awarded by NU Baliwag for attaining a GWA of 3.68, Third Term, Academic Year 2023–2024.",
+    images: ["/achievements/cert2.jpg"],
   },
   {
-    id: "achievement-two",
-    title: "Achievement or Award Title",
-    date: "Month Year",
-    description: "One sentence of context — organization, scope, or why it mattered.",
-  },
-  {
-    id: "achievement-three",
-    title: "Achievement or Award Title",
-    date: "Month Year",
-    description: "One sentence of context — organization, scope, or why it mattered.",
+    id: "deans-list-second-honors",
+    title: "Dean's List Award — Second Honors",
+    date: "April 2024",
+    description:
+      "Awarded by NU Baliwag for attaining a GWA of 3.27, Second Term, Academic Year 2023–2024.",
+    images: ["/achievements/cert1.jpg"],
   },
 ];
 
