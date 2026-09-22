@@ -170,10 +170,13 @@ export type GalleryItem = {
 };
 
 // Placeholder tiles — add images to /public/gallery and fill in `src`.
-export const gallery: GalleryItem[] = Array.from({ length: 8 }).map((_, i) => ({
-  id: `gallery-${i + 1}`,
-  caption: `Gallery photo ${i + 1}`,
-}));
+export const gallery: GalleryItem[] = [
+  { id: "gallery-1", caption: "Gallery photo 1", src: "/gallery/1.jpg" },
+  ...Array.from({ length: 7 }).map((_, i) => ({
+    id: `gallery-${i + 2}`,
+    caption: `Gallery photo ${i + 2}`,
+  })),
+];
 
 export const nav = [
   { label: "About", href: "#about" },
