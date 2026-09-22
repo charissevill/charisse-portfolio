@@ -1,17 +1,9 @@
-"use client";
-
-import { ArrowUpRight, FolderGit2, Maximize2, X } from "lucide-react";
-import { useState } from "react";
+import { ArrowUpRight, FolderGit2 } from "lucide-react";
 import { projects } from "@/data/content";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 
 export default function Projects() {
-  const [preview, setPreview] = useState<{
-    src: string;
-    title: string;
-  } | null>(null);
-
   return (
     <section id="projects" className="py-24">
       <div className="container-custom">
@@ -23,35 +15,20 @@ export default function Projects() {
           {projects.map((project, i) => (
             <Reveal key={project.id} delay={i * 0.06}>
               <div className="flex flex-col gap-4 p-5 sm:flex-row">
-                <button
-                  type="button"
-                  disabled={!project.image}
-                  onClick={() =>
-                    project.image &&
-                    setPreview({ src: project.image, title: project.title })
-                  }
-                  className={`group/thumb relative h-20 w-20 shrink-0 overflow-hidden rounded-lg border border-border/60 bg-bg-soft ${
-                    project.image ? "cursor-zoom-in" : "cursor-default"
-                  }`}
-                >
+                <span className="flex h-20 w-20 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-border/60 bg-bg-soft p-3">
                   {project.image ? (
-                    <>
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img
-                        src={project.image}
-                        alt={project.title}
-                        className="h-full w-full object-cover transition-transform duration-300 group-hover/thumb:scale-110"
-                      />
-                      <span className="absolute inset-0 flex items-center justify-center bg-black/0 opacity-0 transition-all duration-300 group-hover/thumb:bg-black/30 group-hover/thumb:opacity-100">
-                        <Maximize2 size={16} className="text-white" />
-                      </span>
-                    </>
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                      src={project.image}
+                      alt={`${project.title} icon`}
+                      className="h-full w-full object-contain"
+                    />
                   ) : (
-                    <span className="flex h-full w-full items-center justify-center text-accent">
-                      <FolderGit2 size={20} />
+                    <span className="text-accent">
+                      <FolderGit2 size={24} />
                     </span>
                   )}
-                </button>
+                </span>
 
                 <div className="min-w-0 flex-1">
                   <div className="flex items-start justify-between gap-3">
@@ -93,29 +70,6 @@ export default function Projects() {
           ))}
         </div>
       </div>
-
-      {preview && (
-        <div
-          className="fixed inset-0 z-[60] flex flex-col items-center justify-center gap-3 bg-black/80 p-6"
-          onClick={() => setPreview(null)}
-        >
-          <button
-            type="button"
-            aria-label="Close"
-            className="absolute right-6 top-6 text-white/80 hover:text-white"
-            onClick={() => setPreview(null)}
-          >
-            <X size={24} />
-          </button>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={preview.src}
-            alt={preview.title}
-            className="max-h-[80vh] max-w-full rounded-lg object-contain"
-          />
-          <p className="text-center text-sm text-white/80">{preview.title}</p>
-        </div>
-      )}
     </section>
   );
 }

@@ -62,8 +62,8 @@ export type Project = {
   tags: string[];
   link?: string;
   featured?: boolean;
-  // Optional screenshot/mockup. Put files in /public/projects and use
-  // the project's id as the filename, e.g. "/projects/mix-and-blooms.jpg"
+  // Optional app icon/logo. Put files in /public/projects and use
+  // the project's id as the filename, e.g. "/projects/mix-and-blooms.png"
   image?: string;
 };
 
@@ -133,8 +133,7 @@ export const projects: Project[] = [
       "go_router",
     ],
     link: "https://github.com/charissevill/TripNestPH",
-    // TODO: drop a screenshot in /public/projects/tripnest-ph.jpg and uncomment
-    // image: "/projects/tripnest-ph.jpg",
+    image: "/projects/tripnest-ph.png",
     featured: true,
   },
   {
@@ -154,8 +153,7 @@ export const projects: Project[] = [
       "Google Sign-In",
     ],
     link: "https://github.com/charissevill/FlipSnap",
-    // TODO: drop a screenshot in /public/projects/flipsnap.jpg and uncomment
-    // image: "/projects/flipsnap.jpg",
+    image: "/projects/flipsnap.png",
     featured: false,
   },
 ];
