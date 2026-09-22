@@ -23,6 +23,7 @@ export default function Achievements() {
   const years = groups.map((g) => g.year);
   const yearRange =
     years.length > 1 ? `${years[years.length - 1]} – ${years[0]}` : years[0];
+  const cover = achievements.find((item) => item.images?.[0])?.images?.[0];
 
   return (
     <section id="achievements" className="py-24">
@@ -38,13 +39,22 @@ export default function Achievements() {
               onClick={() => setExpanded((e) => !e)}
               className="flex w-full items-center gap-4 p-5 text-left transition-colors hover:bg-bg-soft"
             >
-              <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-xl bg-accent/10 text-accent">
-                <Award size={24} />
+              <span className="flex h-16 w-16 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-border/60 bg-accent/10 text-accent">
+                {cover ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={cover}
+                    alt="Dean's List Award certificate"
+                    className="h-full w-full object-cover"
+                  />
+                ) : (
+                  <Award size={24} />
+                )}
               </span>
               <span className="min-w-0 flex-1">
                 <h3 className="font-semibold">Dean&apos;s List Award</h3>
                 <p className="mt-0.5 text-sm text-fg-muted">
-                  {achievements.length} honors · {yearRange}
+                  {yearRange}
                 </p>
               </span>
               <ChevronDown
