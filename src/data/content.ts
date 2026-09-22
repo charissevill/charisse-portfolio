@@ -82,6 +82,7 @@ export const projects: Project[] = [
     tags: ["Flutter", "Dart", "Firebase", "OpenAI DALL-E", "Meshy 3D", "Lalamove API"],
     link: "https://mixblooms-ea632.web.app",
     image: "/projects/mix-and-blooms.png",
+    screenshots: ["/projects/screenshots/mix-and-blooms-1.png"],
     featured: true,
   },
   {
@@ -93,6 +94,7 @@ export const projects: Project[] = [
     tags: ["Flutter", "Dart", "Firebase", "Node.js", "PayMongo", "GitHub Actions CI"],
     link: "https://github.com/charissevill/ToolFlow",
     image: "/projects/toolflow.png",
+    screenshots: ["/projects/screenshots/toolflow-1.png"],
     featured: true,
   },
   {
