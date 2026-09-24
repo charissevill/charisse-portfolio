@@ -70,14 +70,16 @@ export default function Navbar() {
 
         <div className="hidden items-center gap-4 md:flex">
           <ThemeToggle />
-          <a
-            href={profile.resumeUrl}
-            download
-            className="inline-flex items-center gap-2 rounded-full bg-fg px-4 py-2 text-sm font-medium text-bg transition-opacity hover:opacity-90"
-          >
-            <Download size={14} />
-            Download CV
-          </a>
+          {profile.resumeUrl && (
+            <a
+              href={profile.resumeUrl}
+              download
+              className="inline-flex items-center gap-2 rounded-full bg-fg px-4 py-2 text-sm font-medium text-bg transition-opacity hover:opacity-90"
+            >
+              <Download size={14} />
+              Download CV
+            </a>
+          )}
         </div>
 
         <button
@@ -118,14 +120,16 @@ export default function Navbar() {
             })}
             <div className="flex items-center justify-between pt-2">
               <ThemeToggle />
-              <a
-                href={profile.resumeUrl}
-                download
-                className="inline-flex items-center gap-2 rounded-full bg-fg px-4 py-2 text-sm font-medium text-bg"
-              >
-                <Download size={14} />
-                Download CV
-              </a>
+              {profile.resumeUrl && (
+                <a
+                  href={profile.resumeUrl}
+                  download
+                  className="inline-flex items-center gap-2 rounded-full bg-fg px-4 py-2 text-sm font-medium text-bg"
+                >
+                  <Download size={14} />
+                  Download CV
+                </a>
+              )}
             </div>
           </nav>
         </div>

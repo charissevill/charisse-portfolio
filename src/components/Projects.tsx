@@ -4,7 +4,9 @@ import {
   ArrowUpRight,
   ChevronLeft,
   ChevronRight,
+  Download,
   FolderGit2,
+  Github,
   ImageIcon,
   X,
 } from "lucide-react";
@@ -64,6 +66,28 @@ export default function Projects() {
                       >
                         <ArrowUpRight size={12} />
                         Link
+                      </a>
+                    )}
+                    {project.repoUrl && (
+                      <a
+                        href={project.repoUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center gap-1 text-xs text-accent hover:underline"
+                      >
+                        <Github size={12} />
+                        Code
+                      </a>
+                    )}
+                    {project.downloadUrl && (
+                      <a
+                        href={project.downloadUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center gap-1 text-xs text-accent hover:underline"
+                      >
+                        <Download size={12} />
+                        Download App
                       </a>
                     )}
                     {project.screenshots && project.screenshots.length > 0 && (

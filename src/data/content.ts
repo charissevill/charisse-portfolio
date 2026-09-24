@@ -12,11 +12,13 @@ export const profile = {
   tagline:
     "I build responsive, scalable, and user-focused web and mobile apps.",
   email: "villaramacharisse01@gmail.com",
-  // Drop your PDF resume in /public/cv/ and update the filename below
-  resumeUrl: "/cv/Charisse-Villarama-CV.pdf",
+  // Drop your PDF resume in /public/cv/, set the filename below, and
+  // the "Download CV" button will reappear automatically.
+  resumeUrl: "",
+  // Add a LinkedIn entry here once you have a real profile URL —
+  // it'll show up in the footer automatically.
   socials: [
     { label: "GitHub", href: "https://github.com/charissevill" },
-    { label: "LinkedIn", href: "https://linkedin.com/in/your-username" },
     {
       label: "Email",
       href: "https://mail.google.com/mail/?view=cm&fs=1&to=villaramacharisse01@gmail.com",
@@ -65,6 +67,10 @@ export type Project = {
   description: string;
   tags: string[];
   link?: string;
+  // Optional source code repo, shown as a "Code" link.
+  repoUrl?: string;
+  // Optional Android app download page, shown as a "Download App" link.
+  downloadUrl?: string;
   featured?: boolean;
   // Optional app icon/logo. Put files in /public/projects and use
   // the project's id as the filename, e.g. "/projects/mix-and-blooms.png"
@@ -85,6 +91,7 @@ export const projects: Project[] = [
       "Full-stack Flutter/Firebase marketplace connecting customers with local florists in the Philippines, featuring AI-generated bouquet designs (DALL-E, 3D previews via Meshy), automated florist business verification (geospatial trust scoring + Azure Document Intelligence/Vision), and integrated Lalamove delivery logistics; built end-to-end (client, florist, admin, and rider-facing apps plus all Cloud Functions) as the sole developer, now live and in active use.",
     tags: ["Flutter", "Dart", "Firebase", "OpenAI DALL-E", "Meshy 3D", "Lalamove API"],
     link: "https://mixblooms-ea632.web.app",
+    downloadUrl: "https://charissevill.github.io/mix-and-blooms-app/",
     image: "/projects/mix-and-blooms.png",
     screenshots: ["/projects/screenshots/mix-and-blooms-1.png"],
     featured: true,
@@ -96,7 +103,8 @@ export const projects: Project[] = [
     description:
       "A full-stack e-commerce web app for a hardware/tools retailer, built solo as a BSIT capstone project to replace manual, in-person-only sales with online browsing, checkout, and store management. Designed and built the entire system end-to-end — Flutter Web frontend, Firebase backend (Auth, Firestore, Cloud Functions, Storage), PayMongo payment integration, Lalamove shipping rates, PhilSMS notifications, and an admin panel for inventory, orders, staff, and analytics/reporting (PDF/Excel/CSV export).",
     tags: ["Flutter", "Dart", "Firebase", "Node.js", "PayMongo", "GitHub Actions CI"],
-    link: "https://github.com/charissevill/ToolFlow",
+    link: "https://toolflow-hardware-ph.web.app/",
+    repoUrl: "https://github.com/charissevill/ToolFlow",
     image: "/projects/toolflow.png",
     screenshots: ["/projects/screenshots/toolflow-1.png"],
     featured: true,
@@ -109,6 +117,7 @@ export const projects: Project[] = [
       "A Flutter mobile app that helps travelers discover Philippine destinations and plan trips through AI-generated itineraries grounded in real Places and Firestore data, location-based recommendations, budget tracking, and an AI travel chatbot; I designed and built the full app end-to-end (UI, Firebase backend, AI integration, admin/business management tools), including responsive layouts, security hardening, and automated tests.",
     tags: ["Flutter", "Dart", "Firebase", "Google Places API", "AI/LLM Integration"],
     link: "https://github.com/charissevill/TripNestPH",
+    downloadUrl: "https://charissevill.github.io/tripnest-ph-app/",
     image: "/projects/tripnest-ph.png",
     featured: true,
   },
@@ -120,6 +129,7 @@ export const projects: Project[] = [
       "A Flutter mobile app I designed and built solo to help students combat forgetfulness and low study motivation, combining flashcards, spaced repetition, and quizzes with an AI tutor (Llama 3 via Groq) for on-demand explanations and auto-generated decks. I handled the full stack — Firebase Auth/Firestore/Storage backend, offline-first sync, push notifications, and the Material 3 UI — resulting in a fully offline-capable app with cloud sync, streak-based gamification, and AI content generation from user notes/files.",
     tags: ["Flutter", "Dart", "Firebase", "Groq API", "Llama 3"],
     link: "https://github.com/charissevill/FlipSnap",
+    downloadUrl: "https://charissevill.github.io/flipsnap-download/",
     image: "/projects/flipsnap.png",
     featured: false,
   },

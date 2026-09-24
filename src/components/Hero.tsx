@@ -66,14 +66,16 @@ export default function Hero() {
             View My Work
             <ArrowRight size={14} />
           </a>
-          <a
-            href={profile.resumeUrl}
-            download
-            className="inline-flex items-center gap-2 rounded-full border border-border/60 px-6 py-3 text-sm font-medium transition-colors hover:border-accent/60"
-          >
-            <Download size={14} />
-            Download CV
-          </a>
+          {profile.resumeUrl && (
+            <a
+              href={profile.resumeUrl}
+              download
+              className="inline-flex items-center gap-2 rounded-full border border-border/60 px-6 py-3 text-sm font-medium transition-colors hover:border-accent/60"
+            >
+              <Download size={14} />
+              Download CV
+            </a>
+          )}
         </motion.div>
       </div>
 
