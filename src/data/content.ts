@@ -67,8 +67,6 @@ export type Project = {
   description: string;
   tags: string[];
   link?: string;
-  // Optional source code repo, shown as a "Code" link.
-  repoUrl?: string;
   // Optional Android app download page, shown as a "Download App" link.
   downloadUrl?: string;
   featured?: boolean;
@@ -104,7 +102,6 @@ export const projects: Project[] = [
       "A full-stack e-commerce web app for a hardware/tools retailer, built solo as a BSIT capstone project to replace manual, in-person-only sales with online browsing, checkout, and store management. Designed and built the entire system end-to-end — Flutter Web frontend, Firebase backend (Auth, Firestore, Cloud Functions, Storage), PayMongo payment integration, Lalamove shipping rates, PhilSMS notifications, and an admin panel for inventory, orders, staff, and analytics/reporting (PDF/Excel/CSV export).",
     tags: ["Flutter", "Dart", "Firebase", "Node.js", "PayMongo", "GitHub Actions CI"],
     link: "https://toolflow-hardware-ph.web.app/",
-    repoUrl: "https://github.com/charissevill/ToolFlow",
     image: "/projects/toolflow.png",
     screenshots: ["/projects/screenshots/toolflow-1.png"],
     featured: true,

@@ -6,7 +6,6 @@ import {
   ChevronRight,
   Download,
   FolderGit2,
-  Github,
   ImageIcon,
   X,
 } from "lucide-react";
@@ -66,17 +65,6 @@ export default function Projects() {
                       >
                         <ArrowUpRight size={12} />
                         Link
-                      </a>
-                    )}
-                    {project.repoUrl && (
-                      <a
-                        href={project.repoUrl}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="inline-flex items-center gap-1 text-xs text-accent hover:underline"
-                      >
-                        <Github size={12} />
-                        Code
                       </a>
                     )}
                     {project.downloadUrl && (
