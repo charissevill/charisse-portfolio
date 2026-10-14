@@ -179,10 +179,16 @@ export type Certification = {
   issuer: string;
   image: string; // put files in /public/badges, e.g. "/badges/badge.png"
   url: string; // public verification link (e.g. Credly)
+  issued?: string; // display date, e.g. "Jun 4, 2026"
 };
 
 // Public Credly profile listing all badges — leave empty to hide the link
 export const credlyProfileUrl = "https://www.credly.com/users/charisse-villarama";
+
+// Credly embeddable badge IDs (data-share-badge-id from Credly's "Share > Embed")
+export const credlyBadgeEmbeds: string[] = [
+  "89fd804a-0e6e-40be-b612-504ff01cc646",
+];
 
 export const certifications: Certification[] = [
   {
@@ -191,6 +197,7 @@ export const certifications: Certification[] = [
     issuer: "Certiport, a Pearson VUE business",
     image: "/badges/its-cybersecurity.png",
     url: "https://www.credly.com/badges/4117acc1-66f5-469c-9411-806173968df0/public_url",
+    issued: "Jun 4, 2026",
   },
 ];
 

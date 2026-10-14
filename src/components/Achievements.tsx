@@ -5,8 +5,10 @@ import { useState } from "react";
 import {
   achievements,
   certifications,
+  credlyBadgeEmbeds,
   credlyProfileUrl,
 } from "@/data/content";
+import Script from "next/script";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 
@@ -173,6 +175,11 @@ export default function Achievements() {
                     <span className="mt-0.5 block text-sm text-fg-muted">
                       {cert.issuer}
                     </span>
+                    {cert.issued && (
+                      <span className="mt-0.5 block text-xs text-fg-muted">
+                        Issued {cert.issued}
+                      </span>
+                    )}
                     <span className="mt-1 inline-flex items-center gap-1 text-xs text-accent">
                       Verify on Credly <ExternalLink size={12} />
                     </span>
@@ -180,6 +187,23 @@ export default function Achievements() {
                 </a>
               ))}
             </div>
+            {credlyBadgeEmbeds.length > 0 && (
+              <div className="mt-6 flex flex-wrap gap-4">
+                {credlyBadgeEmbeds.map((id) => (
+                  <div
+                    key={id}
+                    data-iframe-width="150"
+                    data-iframe-height="270"
+                    data-share-badge-id={id}
+                    data-share-badge-host="https://www.credly.com"
+                  />
+                ))}
+                <Script
+                  src="https://cdn.credly.com/assets/utilities/embed.js"
+                  strategy="lazyOnload"
+                />
+              </div>
+            )}
           </Reveal>
         )}
       </div>
