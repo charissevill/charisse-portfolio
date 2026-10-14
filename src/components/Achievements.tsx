@@ -1,8 +1,8 @@
 "use client";
 
-import { Award, ChevronDown, Maximize2, X } from "lucide-react";
+import { Award, ChevronDown, ExternalLink, Maximize2, X } from "lucide-react";
 import { useState } from "react";
-import { achievements } from "@/data/content";
+import { achievements, certifications } from "@/data/content";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 
@@ -129,6 +129,43 @@ export default function Achievements() {
             )}
           </div>
         </Reveal>
+
+        {certifications.length > 0 && (
+          <Reveal delay={0.15}>
+            <h3 className="mb-4 mt-10 font-mono text-xs text-fg-muted">
+              Certifications
+            </h3>
+            <div className="grid gap-4 sm:grid-cols-2">
+              {certifications.map((cert) => (
+                <a
+                  key={cert.id}
+                  href={cert.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-4 rounded-2xl border border-border/60 bg-bg-card p-5 transition-colors hover:bg-bg-soft"
+                >
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={cert.image}
+                    alt={`${cert.title} badge`}
+                    width={64}
+                    height={64}
+                    className="h-16 w-16 shrink-0 object-contain"
+                  />
+                  <span className="min-w-0 flex-1">
+                    <span className="block font-semibold">{cert.title}</span>
+                    <span className="mt-0.5 block text-sm text-fg-muted">
+                      {cert.issuer}
+                    </span>
+                    <span className="mt-1 inline-flex items-center gap-1 text-xs text-accent">
+                      Verify on Credly <ExternalLink size={12} />
+                    </span>
+                  </span>
+                </a>
+              ))}
+            </div>
+          </Reveal>
+        )}
       </div>
 
       {preview && (

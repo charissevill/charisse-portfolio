@@ -170,6 +170,24 @@ export const achievements: Achievement[] = [
   },
 ];
 
+export type Certification = {
+  id: string;
+  title: string;
+  issuer: string;
+  image: string; // put files in /public/badges, e.g. "/badges/badge.png"
+  url: string; // public verification link (e.g. Credly)
+};
+
+export const certifications: Certification[] = [
+  {
+    id: "its-cybersecurity",
+    title: "IT Specialist - Cybersecurity",
+    issuer: "Certiport, a Pearson VUE business",
+    image: "/badges/its-cybersecurity.png",
+    url: "https://www.credly.com/badges/4117acc1-66f5-469c-9411-806173968df0/public_url",
+  },
+];
+
 export type GalleryItem = {
   id: string;
   caption: string;
