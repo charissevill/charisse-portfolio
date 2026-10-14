@@ -67,7 +67,7 @@ export default function Hero() {
               View My Work
               <ArrowRight size={14} />
             </a>
-            {profile.resumeUrl && (
+            {profile.resumeUrl ? (
               <a
                 href={profile.resumeUrl}
                 download
@@ -76,6 +76,15 @@ export default function Hero() {
                 <Download size={14} />
                 Download CV
               </a>
+            ) : (
+              <span
+                aria-disabled="true"
+                title="CV coming soon"
+                className="inline-flex cursor-not-allowed items-center gap-2 rounded-full border border-border/60 px-6 py-3 text-sm font-medium text-fg-muted opacity-60"
+              >
+                <Download size={14} />
+                CV coming soon
+              </span>
             )}
           </motion.div>
         </div>
