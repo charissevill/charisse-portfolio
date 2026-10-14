@@ -2,7 +2,11 @@
 
 import { Award, ChevronDown, ExternalLink, Maximize2, X } from "lucide-react";
 import { useState } from "react";
-import { achievements, certifications } from "@/data/content";
+import {
+  achievements,
+  certifications,
+  credlyProfileUrl,
+} from "@/data/content";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 
@@ -132,9 +136,21 @@ export default function Achievements() {
 
         {certifications.length > 0 && (
           <Reveal delay={0.15}>
-            <h3 className="mb-4 mt-10 font-mono text-xs text-fg-muted">
-              Certifications
-            </h3>
+            <div className="mb-4 mt-10 flex items-center justify-between gap-4">
+              <h3 className="font-mono text-xs text-fg-muted">
+                Certifications
+              </h3>
+              {credlyProfileUrl && (
+                <a
+                  href={credlyProfileUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 text-xs text-accent hover:underline"
+                >
+                  View all on Credly <ExternalLink size={12} />
+                </a>
+              )}
+            </div>
             <div className="grid gap-4 sm:grid-cols-2">
               {certifications.map((cert) => (
                 <a

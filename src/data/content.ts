@@ -181,6 +181,9 @@ export type Certification = {
   url: string; // public verification link (e.g. Credly)
 };
 
+// Public Credly profile listing all badges — leave empty to hide the link
+export const credlyProfileUrl = "https://www.credly.com/users/charisse-villarama";
+
 export const certifications: Certification[] = [
   {
     id: "its-cybersecurity",
