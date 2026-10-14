@@ -15,10 +15,12 @@ export const profile = {
   // Drop your PDF resume in /public/cv/, set the filename below, and
   // the "Download CV" button will reappear automatically.
   resumeUrl: "",
-  // Add a LinkedIn entry here once you have a real profile URL —
-  // it'll show up in the footer automatically.
   socials: [
     { label: "GitHub", href: "https://github.com/charissevill" },
+    {
+      label: "LinkedIn",
+      href: "https://www.linkedin.com/in/charisse-villarama-179423414/",
+    },
     {
       label: "Email",
       href: "https://mail.google.com/mail/?view=cm&fs=1&to=villaramacharisse01@gmail.com",
