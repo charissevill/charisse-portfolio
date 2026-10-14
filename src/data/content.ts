@@ -185,10 +185,6 @@ export type Certification = {
 // Public Credly profile listing all badges — leave empty to hide the link
 export const credlyProfileUrl = "https://www.credly.com/users/charisse-villarama";
 
-// Credly embeddable badge IDs (data-share-badge-id from Credly's "Share > Embed")
-export const credlyBadgeEmbeds: string[] = [
-  "89fd804a-0e6e-40be-b612-504ff01cc646",
-];
 
 export const certifications: Certification[] = [
   {
@@ -198,6 +194,13 @@ export const certifications: Certification[] = [
     image: "/badges/its-cybersecurity.png",
     url: "https://www.credly.com/badges/4117acc1-66f5-469c-9411-806173968df0/public_url",
     issued: "Jun 4, 2026",
+  },
+  {
+    id: "aws-student-community-day",
+    title: "AWS Student Community Day Participant",
+    issuer: "AWS Community",
+    image: "/badges/aws-student-community-day.png",
+    url: "https://www.credly.com/badges/89fd804a-0e6e-40be-b612-504ff01cc646/public_url",
   },
 ];
 

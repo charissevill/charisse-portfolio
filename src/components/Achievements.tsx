@@ -5,10 +5,8 @@ import { useState } from "react";
 import {
   achievements,
   certifications,
-  credlyBadgeEmbeds,
   credlyProfileUrl,
 } from "@/data/content";
-import Script from "next/script";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 
@@ -187,23 +185,6 @@ export default function Achievements() {
                 </a>
               ))}
             </div>
-            {credlyBadgeEmbeds.length > 0 && (
-              <div className="mt-6 flex flex-wrap gap-4">
-                {credlyBadgeEmbeds.map((id) => (
-                  <div
-                    key={id}
-                    data-iframe-width="150"
-                    data-iframe-height="270"
-                    data-share-badge-id={id}
-                    data-share-badge-host="https://www.credly.com"
-                  />
-                ))}
-                <Script
-                  src="https://cdn.credly.com/assets/utilities/embed.js"
-                  strategy="lazyOnload"
-                />
-              </div>
-            )}
           </Reveal>
         )}
       </div>
