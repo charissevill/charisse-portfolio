@@ -1,10 +1,11 @@
-import { Github, Mail } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 import { profile } from "@/data/content";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 
 export default function Contact() {
   const github = profile.socials.find((s) => s.label === "GitHub");
+  const linkedin = profile.socials.find((s) => s.label === "LinkedIn");
 
   return (
     <section id="contact" className="relative overflow-hidden py-24">
@@ -44,6 +45,17 @@ export default function Contact() {
                 >
                   <Github size={16} />
                   GitHub
+                </a>
+              )}
+              {linkedin && (
+                <a
+                  href={linkedin.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full border border-border/60 px-6 py-3 text-sm font-medium transition-colors hover:border-accent/60"
+                >
+                  <Linkedin size={16} />
+                  LinkedIn
                 </a>
               )}
             </div>
