@@ -7,6 +7,7 @@
 export const profile = {
   name: "Charisse Villarama",
   initials: "CV",
+  photo: "/profile/charisse.jpg",
   // TODO: set your preferred title/role — leave empty to hide it
   role: "",
   tagline:
