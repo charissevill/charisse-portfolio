@@ -22,12 +22,20 @@ const pageTitle = profile.role
   : profile.name;
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://charisse-portfolio.vercel.app"),
   title: pageTitle,
   description: profile.tagline,
   openGraph: {
     title: pageTitle,
     description: profile.tagline,
     type: "website",
+    url: "/",
+    siteName: profile.name,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: pageTitle,
+    description: profile.tagline,
   },
 };
 
